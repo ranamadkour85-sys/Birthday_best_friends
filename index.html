@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday, Bestie! 🎀</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- FLOATING DECORATIONS -->
+    <div class="floating-container"></div>
+
+
+    <!-- ================= OPENING SCREEN ================= -->
+
+    <section id="opening" class="opening">
+
+        <div class="envelope-wrapper">
+
+            <div class="sparkle">✦</div>
+
+            <p class="small-text">A little something for</p>
+
+            <h1>My Best Friend</h1>
+
+            <p class="opening-subtitle">
+                I've got something special for you... 💌
+            </p>
+
+            <button id="openBtn" class="main-btn">
+                Open your surprise ✨
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN WEBSITE ================= -->
+
+    <main id="mainContent" class="hidden">
+
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="hero-decoration">♡</div>
+
+            <p class="eyebrow">TODAY IS YOUR DAY ✨</p>
+
+            <h1>
+                Happy Birthday, <br>
+                <span>Bestie!</span>
+            </h1>
+
+            <p class="hero-text">
+                To the person who has always been there for me, who has shared countless memories, and made my life brighter just by being in it💕
+            </p>
+
+            <button class="scroll-btn" onclick="scrollToSection('memories')">
+                Let's go ↓
+            </button>
+
+        </section>
+
+
+        <!-- ================= MEMORIES ================= -->
+
+        <section id="memories" class="section">
+
+            <p class="eyebrow">OUR LITTLE WORLD 📸</p>
+
+            <h2>Some of my favorite memories</h2>
+
+            <p class="section-description">
+                Isn't it crazy how we've been friends since elemnentary school? And I would'nt trade a single memory for anything. 
+            </p>
+
+            <div class="memory-grid">
+
+                <div class="memory-card">
+                    <img src="images/memory1.jpg" alt="Memory 1">
+                    <div class="memory-caption">
+                        <h3>That day 💗</h3>
+                        <p>Definitely one for the books.</p>
+                    </div>
+                </div>
+
+                <div class="memory-card">
+                    <img src="images/memory2.jpg" alt="Memory 2">
+                    <div class="memory-caption">
+                        <h3>Us being us 😭</h3>
+                        <p>No explanation necessary.</p>
+                    </div>
+                </div>
+
+                <div class="memory-card">
+                    <img src="images/memory3.jpg" alt="Memory 3">
+                    <div class="memory-caption">
+                        <h3>Core memory ✨</h3>
+                        <p>I'd relive this one.</p>
+                    </div>
+                </div>
+
+                <div class="memory-card">
+                    <img src="images/memory4.jpg" alt="Memory 4">
+                    <div class="memory-caption">
+                        <h3>Another one 🤭</h3>
+                        <p>We really are something.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= THINGS I LOVE ================= -->
+
+        <section class="section reasons-section">
+
+            <p class="eyebrow">JUST SO YOU KNOW 💗</p>
+
+            <h2>Things I love about you</h2>
+
+            <p class="section-description">
+                Click the cards. I promise they're not boring.
+            </p>
+
+
+            <div class="reasons-grid">
+
+                <div class="reason-card">
+                    <div class="card-front">
+                        <span>01</span>
+                        <h3>Your humor</h3>
+                        <p>Click me →</p>
+                    </div>
+
+                    <div class="card-back">
+                        <p>
+                            You somehow manage to make me laugh
+                            at the most random things.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="reason-card">
+                    <div class="card-front">
+                        <span>02</span>
+                        <h3>Your heart</h3>
+                        <p>Click me →</p>
+                    </div>
+
+                    <div class="card-back">
+                        <p>
+                            You're genuinely one of the people
+                            I can always count on.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="reason-card">
+                    <div class="card-front">
+                        <span>03</span>
+                        <h3>Our chaos</h3>
+                        <p>Click me →</p>
+                    </div>
+
+                    <div class="card-back">
+                        <p>
+                            Life would be significantly less
+                            entertaining without our nonsense.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="reason-card">
+                    <div class="card-front">
+                        <span>04</span>
+                        <h3>You being YOU</h3>
+                        <p>Click me →</p>
+                    </div>
+
+                    <div class="card-back">
+                        <p>
+                            Honestly? You're just one of a kind.
+                            And I'm very lucky to know you.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= INSIDE JOKES ================= -->
+
+        <section class="section jokes-section">
+
+            <p class="eyebrow">WARNING ⚠️</p>
+
+            <h2>Our extremely serious lore</h2>
+
+            <p class="section-description">
+                Click the button to expose our friendship.
+            </p>
+
+            <div class="joke-box">
+
+                <div id="jokeText">
+                    🤫 Nothing suspicious here...
+                </div>
+
+                <button id="jokeBtn" class="main-btn">
+                    Reveal the lore
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= LETTER ================= -->
+
+        <section class="section letter-section">
+
+            <p class="eyebrow">A LITTLE LETTER 💌</p>
+
+            <h2>For you</h2>
+
+            <div class="letter">
+
+                <div class="letter-top">♡</div>
+
+                <p>Dear bestiee,</p>
+
+                <p>
+                    Happy birthday to person who has been with me through thick and thin,
+                     who has seen me at my best and worst and still stays anyway, 
+                     who knows me better than I know myself, know all my secrects, crushes, dreams and fears,
+                     who has never failed to make me laugh when I was feeling down.
+                </p>
+
+                <p>
+                    I dont think I can ever express how much you in my life means to me. You've a heart made of gold,
+                    a beautiful pure soul, and a personality that light up any room you walk into.
+                    I'm so gratefuly happy to have you as my best friend, my secret keeper and my partner in crime.
+
+                </p>
+
+                <p>
+                   I hope this year brings you all the happiness, love, and success you deserve.
+                   I hope you continue to chase your dreams, and to never forget how amazingly talnted and special you are.
+                   I hope you know that I will always be here for you, through ups and downs, 
+                   through laughter and tears, and through every chapter of our lives.
+                   I love you so much, you're more than just my best friend, you're a sister, a family, and a blessing in my life.
+                                
+                </p>
+
+                <p>
+                    Thank you for being you.
+                    And thank you for being my person. 💗
+                </p>
+
+                <p class="signature">
+                    Your favorite person,<br>
+                     <span> Rooni</span> 🎀
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FINAL SURPRISE ================= -->
+
+        <section class="final-section">
+
+            <p class="eyebrow">WAIT...</p>
+
+            <h2>There's one last thing.</h2>
+
+            <button id="surpriseBtn" class="main-btn">
+                One last surprise 🎁
+            </button>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= FINAL POPUP ================= -->
+
+    <div id="finalPopup" class="popup hidden">
+
+        <div class="popup-content">
+
+            <button id="closePopup" class="close-btn">×</button>
+
+            <div class="big-heart">♡</div>
+
+            <h2>HAPPY BIRTHDAY!!! 🎂</h2>
+
+            <p>
+                I love you, idiot. 💗
+            </p>
+
+            <p>
+                Here's to many more years of us being
+                completely ridiculous together.
+            </p>
+
+            <div class="confetti-message">
+                🎀 ✨ 🎉 💗 🎂 ✨ 🎀
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

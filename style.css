@@ -1,0 +1,589 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fff8fb;
+    color: #382b32;
+    overflow-x: hidden;
+}
+
+
+/* ================= GENERAL ================= */
+
+.hidden {
+    display: none !important;
+}
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 110px 25px;
+    text-align: center;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: #c87998;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(40px, 6vw, 65px);
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    color: #8f7d85;
+    margin-bottom: 45px;
+}
+
+
+/* ================= OPENING ================= */
+
+.opening {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background:
+        radial-gradient(circle at 20% 20%, #ffe1ec, transparent 30%),
+        radial-gradient(circle at 80% 80%, #eadcff, transparent 30%),
+        #fff8fb;
+}
+
+.envelope-wrapper {
+    position: relative;
+    padding: 50px;
+}
+
+.sparkle {
+    font-size: 50px;
+    color: #d986a4;
+    animation: sparkle 2s infinite ease-in-out;
+}
+
+.small-text {
+    margin-top: 10px;
+    color: #9d8790;
+    letter-spacing: 2px;
+}
+
+.opening h1 {
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(55px, 9vw, 100px);
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.opening-subtitle {
+    color: #89747d;
+    margin-bottom: 30px;
+}
+
+
+/* ================= BUTTON ================= */
+
+.main-btn {
+    border: none;
+    padding: 15px 28px;
+    border-radius: 50px;
+    background: #d982a2;
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+
+    box-shadow: 0 10px 25px rgba(180, 100, 130, 0.25);
+
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(180, 100, 130, 0.35);
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 40px 25px;
+
+    background:
+        radial-gradient(circle at 10% 30%, #ffddea, transparent 25%),
+        radial-gradient(circle at 90% 70%, #e8ddff, transparent 25%),
+        #fff8fb;
+}
+
+.hero-decoration {
+    font-size: 70px;
+    color: #d982a2;
+    animation: float 3s infinite ease-in-out;
+}
+
+.hero h1 {
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(60px, 9vw, 110px);
+    font-weight: 400;
+    line-height: 1;
+    max-width: 1000px;
+}
+
+.hero h1 span {
+    display: block;
+    font-family: "Sacramento", cursive;
+    color: #d982a2;
+    font-size: 1.3em;
+}
+
+.hero-text {
+    max-width: 600px;
+    color: #806f77;
+    margin: 30px 0;
+    line-height: 1.8;
+}
+
+.scroll-btn {
+    background: none;
+    border: none;
+    color: #c87998;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+
+/* ================= MEMORIES ================= */
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.memory-card {
+    background: white;
+    padding: 12px;
+    border-radius: 18px;
+
+    box-shadow: 0 10px 35px rgba(90, 50, 70, 0.08);
+
+    transition: 0.4s;
+}
+
+.memory-card:hover {
+    transform: translateY(-8px) rotate(1deg);
+}
+
+.memory-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.memory-caption {
+    padding: 18px;
+    text-align: left;
+}
+
+.memory-caption h3 {
+    margin-bottom: 5px;
+}
+
+.memory-caption p {
+    color: #96858c;
+    font-size: 13px;
+}
+
+
+/* ================= REASONS ================= */
+
+.reasons-section {
+    background: #fff1f6;
+    max-width: none;
+}
+
+.reasons-section > * {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reasons-grid {
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.reason-card {
+    height: 250px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 20px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+}
+
+.card-front {
+    background: white;
+}
+
+.card-front span {
+    color: #d982a2;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.card-front h3 {
+    font-family: "DM Serif Display", serif;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.card-front p {
+    color: #a28e97;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.card-back {
+    background: #d982a2;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.card-back p {
+    line-height: 1.7;
+}
+
+.reason-card.flipped .card-front {
+    transform: rotateY(180deg);
+}
+
+.reason-card.flipped .card-back {
+    transform: rotateY(360deg);
+}
+
+
+/* ================= JOKES ================= */
+
+.jokes-section {
+    background: #382b32;
+    color: white;
+    max-width: none;
+}
+
+.jokes-section .section-description {
+    color: #d8cbd0;
+}
+
+.joke-box {
+    max-width: 650px;
+    margin: auto;
+    padding: 50px 30px;
+
+    background: rgba(255,255,255,0.08);
+    border-radius: 25px;
+
+    backdrop-filter: blur(10px);
+}
+
+#jokeText {
+    font-family: "DM Serif Display", serif;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+
+/* ================= LETTER ================= */
+
+.letter-section {
+    background: #fff8fb;
+}
+
+.letter {
+    max-width: 700px;
+    margin: 40px auto 0;
+
+    background: #fffdf9;
+    padding: 60px;
+
+    text-align: left;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 20px 50px rgba(70, 40, 50, 0.1);
+
+    line-height: 2;
+}
+
+.letter-top {
+    text-align: center;
+    font-size: 35px;
+    color: #d982a2;
+    margin-bottom: 20px;
+}
+
+.letter p {
+    margin-bottom: 20px;
+}
+
+.signature {
+    font-family: "Sacramento", cursive;
+    font-size: 32px;
+    color: #c87998;
+}
+
+
+/* ================= FINAL ================= */
+
+.final-section {
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle, #ffe0ec, transparent 35%),
+        #fff8fb;
+}
+
+.final-section h2 {
+    margin-bottom: 30px;
+}
+
+
+/* ================= POPUP ================= */
+
+.popup {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(40, 25, 32, 0.7);
+
+    z-index: 1000;
+
+    padding: 20px;
+}
+
+.popup-content {
+    position: relative;
+
+    max-width: 600px;
+    width: 100%;
+
+    padding: 60px 40px;
+
+    background: #fff8fb;
+    border-radius: 25px;
+
+    text-align: center;
+
+    animation: popup 0.5s ease;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    border: none;
+    background: none;
+
+    font-size: 30px;
+    color: #8c737d;
+
+    cursor: pointer;
+}
+
+.big-heart {
+    font-size: 80px;
+    color: #d982a2;
+
+    animation: heartbeat 1.3s infinite;
+}
+
+.popup-content h2 {
+    font-size: 50px;
+}
+
+.popup-content p {
+    margin: 15px 0;
+    color: #806f77;
+}
+
+.confetti-message {
+    margin-top: 25px;
+    font-size: 25px;
+}
+
+
+/* ================= FLOATING HEARTS ================= */
+
+.floating-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.floating {
+    position: absolute;
+    bottom: -30px;
+
+    font-size: 20px;
+
+    animation: rise 6s linear forwards;
+}
+
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes sparkle {
+
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1.3) rotate(15deg);
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes rise {
+
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes popup {
+
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 750px) {
+
+    .memory-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reasons-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .memory-card img {
+        height: 280px;
+    }
+
+    .letter {
+        padding: 35px 25px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .reasons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .opening h1 {
+        font-size: 55px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+}
